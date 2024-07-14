@@ -37,29 +37,24 @@ public class Main {
     }
 
     public static Employee minSalaryEployee() {
-        int minSalary = employees[0].getSalary();
-        int min = 0;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getSalary() < minSalary) {
-                minSalary = employees[i].getSalary();
-                min = i;
+        Employee min = employees[0];
+        for (Employee employee : employees) {
+            if (employee.getSalary() < min.getSalary()) {
+                min = employee;
             }
         }
-        return employees[min];
+        return min;
     }
 
     public static Employee maxSalaryEployee() {
-        int maxSalary = employees[0].getSalary();
-        int max = 0;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getSalary() > maxSalary) {
-                maxSalary = employees[i].getSalary();
-                max = i;
+            Employee max = employees[0];
+            for (Employee employee : employees) {
+                if (employee.getSalary() > max.getSalary()) {
+                    max = employee;
+
+                }
             }
-
-        }
-        return employees[max];
-
+        return max;
     }
 
     public static double averageSalary() {
