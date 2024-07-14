@@ -51,7 +51,6 @@ public class Main {
             for (Employee employee : employees) {
                 if (employee.getSalary() > max.getSalary()) {
                     max = employee;
-
                 }
             }
         return max;
